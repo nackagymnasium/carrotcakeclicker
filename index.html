@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrot Clicker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Carrot Clicker Idle Game</h1>
+    <div class="game">
+      <!-- Carrot Click Image -->
+      <img id="carrot-image" class="carrot-image" src="carrot.png" alt="Carrot" onclick="clickCarrot()">
+
+      <!-- Carrot Counters -->
+      <div id="carrot-counter" class="counter">Carrots: 0</div>
+      <div id="carrots-per-click" class="counter">Carrots per click: 1</div>
+      <div id="carrots-per-second" class="counter">Carrots per second: 0</div>
+
+      <!-- Upgrade Section -->
+      <div class="upgrades">
+        <h2>Upgrades</h2>
+        <button class="upgrade-btn" onclick="buyUpgrade('click', clickUpgradeCost)">Increase Carrots per Click (Cost: <span id="click-cost">10</span>)</button>
+        <button class="upgrade-btn" onclick="buyUpgrade('passive', passiveUpgradeCost)">Increase Carrots per Second (Cost: <span id="passive-cost">20</span>)</button>
+        <button class="upgrade-btn" id="multiplier-btn" onclick="buyUpgrade('multiplier', multiplierUpgradeCost)">Carrot Multiplier x2 (Cost: <span id="multiplier-cost">50</span>)</button>
+        <button class="upgrade-btn" onclick="buyUpgrade('fasterPassive', fasterPassiveUpgradeCost)">Faster Passive Carrots (Cost: <span id="faster-cost">100</span>)</button>
+      </div>
+
+      <!-- Save and Reset Buttons -->
+      <div class="controls">
+        <button class="control-btn" onclick="saveGame()">Save Game</button>
+        <button class="control-btn reset-btn" onclick="resetGame()">Reset Game</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

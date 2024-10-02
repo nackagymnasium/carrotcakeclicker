@@ -1,0 +1,141 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f0f4f8; /* Light background for a clean look */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container that holds the entire game */
+  .container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Game title */
+  h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Carrot image */
+  .carrot-image {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .carrot-image:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Counter styles */
+  .counter {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  /* Upgrades section */
+  .upgrades {
+    margin: 20px 0;
+  }
+  
+  .upgrades h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Upgrade buttons */
+  .upgrade-btn {
+    background-color: #ff9800;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+  }
+  
+  .upgrade-btn:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+  }
+  
+  .upgrade-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Control buttons */
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .control-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+  
+  .control-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .reset-btn {
+    background-color: #f44336;
+  }
+  
+  .reset-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .control-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Make the design responsive */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .carrot-image {
+      width: 120px;
+    }
+  
+    .upgrade-btn, .control-btn {
+      font-size: 0.9em;
+      padding: 8px 16px;
+    }
+  }
+  
